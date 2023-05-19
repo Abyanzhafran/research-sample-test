@@ -51,20 +51,29 @@ async function detectIndirectDependencies(directoryPath = ".") {
   };
 
   const result = await depcheck(absolutePath, options);
+  console.log("allUsedDepsRaw: ", result);
+  console.log("depsVal-result.using", Object.keys(result.using));
+  console.log("depsVal-result.dependencies", result.dependencies);
 
   // try to change this logic(original)
   // const indirectDependencies = result.using.filter((dependency) => {
   //   return !result.dependencies.includes(dependency);
   // });
 
-  const indirectDependencies = Object.keys(result.using).filter((deps) => {
-    return !result.dependencies.includes(deps);
-  });
+  /*
+    INDIRECT : 
+    - iterate dependencies in result.using's key (which is a dependencies value)
+    - if result.dependencies NOT includes(result.using's dependencies)
+    - that was the value
+  */
+  // const indirectDependencies = Object.keys(result.using).filter((deps) => {
+  //   return !result.dependencies.includes(deps);
+  // });
 
-  console.log("Indirect Dependencies:");
-  indirectDependencies.forEach((dependency) => {
-    console.log(dependency);
-  });
+  // console.log("Indirect Dependencies:");
+  // indirectDependencies.forEach((dependency) => {
+  //   console.log(dependency);
+  // });
 }
 
 // Usage
