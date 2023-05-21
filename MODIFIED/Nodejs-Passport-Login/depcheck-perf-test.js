@@ -1,7 +1,7 @@
 const { performance } = require("perf_hooks");
 const depcheck = require("depcheck");
 const options = {
-  ignoreBinPackage: true, // ignore the packages with bin entry
+  ignoreBinPackage: false, // ignore the packages with bin entry
   skipMissing: true, // skip calculation of missing dependencies
   ignoreDirs: [
     /*
