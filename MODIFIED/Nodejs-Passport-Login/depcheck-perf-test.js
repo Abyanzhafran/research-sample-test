@@ -1,21 +1,23 @@
 const { performance } = require("perf_hooks");
 const depcheck = require("depcheck");
 const options = {
-  ignoreBinPackage: false, // ignore the packages with bin entry
   skipMissing: true, // skip calculation of missing dependencies
+  ignorePatterns: ["dist", ".gitignore"],
   ignoreDirs: [
     /*
-        ignore node_modules directory, even it's little bit confusing.
-        When you look inside constants.js file, node_modules already ignored
-        , inside ignorePattern field by defaultOption
-      */
+      ignore node_modules directory, even it's little bit confusing.
+      When you look inside constants.js file, node_modules already ignored
+      , inside ignorePattern field by defaultOption.
+      also ignore .gitignore file
+    */
     "node_modules",
   ],
   ignoreMatches: [
     // ignore dependencies that matches these globs
-    "jest",
-    "eslint",
+    "jest-*",
+    "eslint-*",
     "babel-*",
+    "webpack-*",
   ],
 };
 
@@ -24,6 +26,5 @@ depcheck(__dirname, options, (unused) => {
   const end = performance.now();
   console.log(unused.dependencies);
   console.log(unused.devDependencies);
-  // console.log(unused);
   console.log(`Time taken: ${(end - start).toFixed(2)} milliseconds`);
 });
