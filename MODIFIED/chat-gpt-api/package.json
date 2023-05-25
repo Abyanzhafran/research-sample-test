@@ -13,6 +13,7 @@
   "dependencies": {
     "depcheck": "^1.4.3",
     "dotenv": "^16.0.3",
-    "openai": "^3.2.1"
+    "openai": "^3.2.1",
+    "research-deps-checker": "^0.0.2"
   }
 }

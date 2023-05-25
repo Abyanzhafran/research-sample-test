@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "depcheck": "^1.4.3",
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "research-deps-checker": "^0.0.2"
   }
 }

@@ -12,6 +12,7 @@
     "depcheck": "^1.4.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "research-deps-checker": "^0.0.2",
     "socket.io": "^4.6.1"
   },
   "devDependencies": {

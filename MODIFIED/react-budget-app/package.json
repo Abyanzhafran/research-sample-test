@@ -12,6 +12,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "research-deps-checker": "^0.0.2",
     "uuid": "^9.0.0",
     "web-vitals": "^3.3.1"
   },

@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "depcheck": "^1.4.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "research-deps-checker": "^0.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

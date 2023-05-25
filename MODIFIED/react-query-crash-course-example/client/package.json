@@ -14,7 +14,8 @@
     "axios": "^1.4.0",
     "depcheck": "^1.4.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "research-deps-checker": "^0.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.6",

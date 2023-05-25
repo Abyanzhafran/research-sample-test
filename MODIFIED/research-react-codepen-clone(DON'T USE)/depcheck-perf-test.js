@@ -21,10 +21,14 @@ const options = {
   ],
 };
 
+console.log("Depcheck Result : \n");
+
 const start = performance.now();
+
 depcheck(__dirname, options, (unused) => {
+  console.log("Unused dependencies : ", unused.dependencies);
+  console.log("Unused devDependencies : ", unused.devDependencies);
+
   const end = performance.now();
-  console.log(unused.dependencies);
-  console.log(unused.devDependencies);
-  console.log(`Time taken: ${(end - start).toFixed(2)} milliseconds`);
+  console.log(`Execution time: ${(end - start).toFixed(2)} ms`);
 });
